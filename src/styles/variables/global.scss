@@ -1,0 +1,23 @@
+:root {
+  --font-family-main: "GostUI", "Times New Roman", Serif;
+
+  --gray-1: #f5f5f5;
+  --gray-2: #c7c7c7;
+  --gray-3: #616161;
+  --gray-4: #424242;
+  --gray-5: #242424;
+
+  --font-size-m: 14px;
+  --font-size-l: 16px;
+  --font-size-xl: 18px;
+
+  --font-weight-r: 400;
+  --font-weight-m: 500;
+
+  --font-line-m: 140%;
+
+  --font-p14: var(--font-weight-r) var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+  --font-p14med: var(--font-weight-m) var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+
+  --font-p16med: var(--font-weight-m) var(--font-size-l) / var(--font-line-m) var(--font-family-main);
+}

@@ -1,0 +1,12 @@
+@import "../../styles/variables/consts.scss";
+
+.container {
+  @include container;
+}
+.containerMain {
+  background-color: #fff;
+  padding-left: 10px;
+}
+.loaderContainer {
+  padding-top: 200px;
+}

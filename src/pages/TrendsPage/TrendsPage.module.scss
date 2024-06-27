@@ -1,0 +1,20 @@
+@import "../../styles/consts.scss";
+@import "../../styles/variables/consts.scss";
+
+.container {
+  @include container;
+}
+
+.label {
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-xl;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}

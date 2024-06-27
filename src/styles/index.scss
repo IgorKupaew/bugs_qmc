@@ -1,0 +1,278 @@
+@import "variables/global.scss";
+@import "variables/consts.scss";
+
+.app {
+  background-color: #fcfcfc;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.app::-webkit-scrollbar {
+  width: 3px;
+}
+
+.app::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.app::-webkit-scrollbar-thumb {
+  background-color: #a4a4a4;
+  border-radius: 20px;
+}
+
+a.active {
+  font-weight: 500;
+}
+a.active.headerNavButton::after {
+  content: "";
+  position: absolute;
+  bottom: -16.5px;
+  left: 0;
+  height: 2px;
+  background-color: #5b5fc7;
+  width: 100%;
+  transition: width 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #242424;
+}
+.ant-modal-wrap.notificationModalWrapper {
+  overflow: hidden;
+  left: unset;
+  right: 10px;
+  top: 57px;
+  bottom: 10px;
+  padding-left: 100vw;
+}
+.notificationModal {
+  top: 0;
+  right: 0;
+  min-height: 92.755102041vh;
+
+  .ant-modal-header {
+    padding: 12px 16px;
+  }
+  .ant-modal-content {
+    overflow-y: scroll;
+    max-height: 92.755102041vh;
+    &::-webkit-scrollbar {
+      width: 6px;
+      background-color: #f9f9fd;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $gray2;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      background-clip: content-box;
+    }
+    &::-webkit-scrollbar-track {
+      width: 20px;
+    }
+  }
+  .ant-modal-close-x {
+    width: 51px;
+    line-height: 47px;
+    height: 47px;
+  }
+  .ant-modal-body {
+    padding-bottom: 0px;
+  }
+}
+
+.ant-table-cell::before {
+  display: none;
+}
+.ant-table-thead > tr > th {
+  background-color: #fff;
+  padding: 8px 30px 0 30px;
+}
+.ant-table-thead > tr {
+  padding: 16px;
+}
+.ant-table-tbody > tr > td {
+  background-color: #fff;
+  padding: 8px 30px 0 30px;
+}
+.ant-table-tbody > tr {
+  padding: 16px;
+}
+.ant-table-content {
+  padding: 16px;
+}
+
+.ant-card-head-title {
+  padding: 12px 0;
+  font-family: $font-family-main;
+  color: $gray5;
+  font-size: 18px;
+  font-weight: 500;
+}
+.ant-card-head {
+  padding: 0 16px;
+  max-height: 47px;
+  min-height: 47px;
+}
+.ant-card-extra {
+  padding: 12px 0;
+}
+.ant-switch {
+  min-width: 40px;
+  height: 20px;
+}
+.ant-card-body {
+  padding: 16px 16px 8px 16px;
+}
+.ant-switch-handle {
+  width: 16px;
+  height: 16px;
+}
+.changed__tooltip {
+  div {
+    .g2-tooltip {
+      background-color: transparent !important;
+      color: transparent !important;
+      box-shadow: none !important;
+    }
+    .g2-tooltip-value {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      z-index: 10;
+      background-color: #242424;
+      display: flex;
+      min-width: 195px;
+      padding: 16px;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      border-radius: 6px;
+      background: $gray5;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04) !important;
+    }
+    .g2-tooltip-name {
+      display: none;
+    }
+    .g2-tooltip-title {
+      display: none;
+    }
+    .g2-tooltip-marker {
+      display: none !important;
+    }
+  }
+}
+
+.ant-slider-handle:focus {
+  box-shadow: 0 0 0 5px rgba(91, 95, 199, 0.3);
+}
+
+span.ant-radio + * {
+  padding-right: 8px;
+  padding-left: 8px;
+  &:last-child {
+    padding-right: 0px;
+  }
+}
+
+@media (max-width: 1400px) {
+  a.active.headerNavButton::after {
+    display: none;
+  }
+}
+
+// DATE PICKER
+.ant-picker-cell-in-view.ant-picker-cell-in-range::before {
+  background: #e8ebfa;
+}
+.ant-picker-cell-in-view.ant-picker-cell-range-start:not(.ant-picker-cell-range-start-single)::before,
+.ant-picker-cell-in-view.ant-picker-cell-range-end:not(.ant-picker-cell-range-end-single)::before {
+  background: #e8ebfa;
+}
+.ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
+  color: #fff;
+  background: #5b5fc7;
+}
+.ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover::before,
+.ant-picker-cell-in-view.ant-picker-cell-range-start.ant-picker-cell-range-hover::before,
+.ant-picker-cell-in-view.ant-picker-cell-range-end.ant-picker-cell-range-hover::before,
+.ant-picker-cell-in-view.ant-picker-cell-range-start:not(
+    .ant-picker-cell-range-start-single
+  ).ant-picker-cell-range-hover-start::before,
+.ant-picker-cell-in-view.ant-picker-cell-range-end:not(
+    .ant-picker-cell-range-end-single
+  ).ant-picker-cell-range-hover-end::before,
+.ant-picker-panel
+  > :not(.ant-picker-date-panel)
+  .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-start::before,
+.ant-picker-panel
+  > :not(.ant-picker-date-panel)
+  .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-end::before {
+  background: #d4d2ff;
+}
+.ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+  border: 2px solid #5b5fc7;
+  border-radius: 5px;
+}
+.ant-picker-date-panel
+  .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-start
+  .ant-picker-cell-inner::after,
+.ant-picker-date-panel
+  .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-end
+  .ant-picker-cell-inner::after {
+  background: #ffffff;
+}
+tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover:last-child::after,
+tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::after,
+.ant-picker-cell-in-view.ant-picker-cell-end.ant-picker-cell-range-hover-edge-end.ant-picker-cell-range-hover-edge-end-near-range::after,
+.ant-picker-cell-in-view.ant-picker-cell-range-hover-edge-end:not(
+    .ant-picker-cell-range-hover-edge-end-near-range
+  )::after,
+.ant-picker-cell-in-view.ant-picker-cell-range-hover-end::after {
+  border-right: 1px dashed #5b5fc7;
+}
+.ant-picker-cell-in-view.ant-picker-cell-range-hover-start:not(.ant-picker-cell-in-range):not(
+    .ant-picker-cell-range-start
+  ):not(.ant-picker-cell-range-end)::after,
+.ant-picker-cell-in-view.ant-picker-cell-range-hover-end:not(.ant-picker-cell-in-range):not(
+    .ant-picker-cell-range-start
+  ):not(.ant-picker-cell-range-end)::after,
+.ant-picker-cell-in-view.ant-picker-cell-range-hover-start.ant-picker-cell-range-start-single::after,
+.ant-picker-cell-in-view.ant-picker-cell-range-hover-start.ant-picker-cell-range-start.ant-picker-cell-range-end.ant-picker-cell-range-end-near-hover::after,
+.ant-picker-cell-in-view.ant-picker-cell-range-hover-end.ant-picker-cell-range-start.ant-picker-cell-range-end.ant-picker-cell-range-start-near-hover::after,
+.ant-picker-cell-in-view.ant-picker-cell-range-hover-end.ant-picker-cell-range-end-single::after,
+.ant-picker-cell-in-view.ant-picker-cell-range-hover:not(.ant-picker-cell-in-range)::after {
+  border-top: 1px dashed #5b5fc7;
+  border-bottom: 1px dashed #5b5fc7;
+}
+tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover:first-child::after,
+tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-end:first-child::after,
+.ant-picker-cell-in-view.ant-picker-cell-start.ant-picker-cell-range-hover-edge-start.ant-picker-cell-range-hover-edge-start-near-range::after,
+.ant-picker-cell-in-view.ant-picker-cell-range-hover-edge-start:not(
+    .ant-picker-cell-range-hover-edge-start-near-range
+  )::after,
+.ant-picker-cell-in-view.ant-picker-cell-range-hover-start::after {
+  border-left: 1px dashed #5b5fc7;
+}
+.ant-picker-focused {
+  box-shadow: 0 0 0 2px rgba(91, 95, 199, 0.2);
+}
+.ant-picker:hover,
+.ant-picker-focused {
+  border-color: #5b5fc7;
+  border-right-width: 1px;
+}
+.ant-picker-range .ant-picker-active-bar {
+  background: #5b5ec7ae;
+}
+.ant-picker-header-view button:hover {
+  color: #5b5fc7;
+}
+// DATE PICKER

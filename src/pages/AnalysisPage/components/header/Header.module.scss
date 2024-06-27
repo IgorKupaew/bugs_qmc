@@ -1,0 +1,17 @@
+@import "../../../../styles/variables/consts.scss";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.label {
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-xl;
+}
+.right {
+  display: flex;
+  gap: 15px;
+}

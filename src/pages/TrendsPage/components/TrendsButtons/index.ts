@@ -1,0 +1,1 @@
+export { TrendsButtons } from "./TrendsButtons";

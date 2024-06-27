@@ -1,0 +1,51 @@
+.switchButtonsContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  border: 1px solid #e8ebfa;
+  background: #f5f5f5;
+  padding: 2px;
+  border-radius: 6px;
+}
+.button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 0 12px;
+  transition:
+    background-color 0.2s ease,
+    border-radius 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.label {
+  font-family: "GostUI";
+  color: #616161;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.active {
+  border-radius: 4px;
+  border: 1px solid #c7c7c74d;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.04);
+  background-color: #fff;
+  & svg {
+    path {
+      stroke: #5b5fc7;
+    }
+  }
+  & .label {
+    color: #2f2f4a;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-family: "GostUI";
+  }
+}

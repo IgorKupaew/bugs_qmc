@@ -1,0 +1,6 @@
+@import "../../styles/variables/consts.scss";
+
+.loaderContainer {
+  @include centerContainer;
+  height: 100%;
+}

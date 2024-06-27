@@ -1,0 +1,50 @@
+$font-family-main: "GostUI", "Times New Roman", Serif;
+
+$gray1: #f5f5f5;
+$gray2: #c7c7c7;
+$gray3: #616161;
+$gray4: #424242;
+$gray5: #242424;
+$red: red;
+$addons-green: #13a10e;
+$addons-yellow: #ffb900;
+$addons-red: #ee5157;
+$primary-1: #2f2f4a;
+$primary-3: #5b5fc7;
+$primary-5: #e8ebfa;
+
+$font-size-extra-m: 10px;
+$font-size-mini-m: 12px;
+$font-size-m: 14px;
+$font-size-l: 16px;
+$font-size-xl: 18px;
+$font-size-xxl: 24px;
+
+$font-weight-r: 400;
+$font-weight-m: 500;
+$font-weight-l: 600;
+$font-weight-xl: 682;
+
+@mixin para14($color: #424242, $font-weight: 400) {
+  color: $color;
+  font-size: $font-size-m;
+  font-weight: $font-weight;
+}
+
+@mixin para16($color: #424242, $font-weight: 400) {
+  color: $color;
+  font-size: $font-size-l;
+  font-weight: $font-weight;
+}
+
+@mixin centerContainer() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 15px;
+}

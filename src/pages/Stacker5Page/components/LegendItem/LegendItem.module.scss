@@ -1,0 +1,29 @@
+@import "../../../../styles/variables/consts.scss";
+
+.legendContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.legendValue {
+  color: #fff;
+  font-family: $font-family-main;
+  font-size: $font-size-extra-m;
+  font-weight: $font-weight-m;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  border: 1px solid #fff;
+  background: $addons-green;
+
+  width: 39px;
+  height: 15px;
+}
+.legendLabel {
+  color: $gray4;
+  font-family: $font-family-main;
+  font-size: $font-size-mini-m;
+}

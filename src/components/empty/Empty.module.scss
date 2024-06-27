@@ -1,0 +1,12 @@
+@import "../../styles/variables/consts.scss";
+
+.empty {
+  @include centerContainer;
+  height: 100%;
+}
+.emptyText {
+  color: $gray2;
+  font-family: $font-family-main;
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-l;
+}

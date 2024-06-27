@@ -1,0 +1,25 @@
+@import "../../styles/variables/consts.scss";
+.sliderContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.label {
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  font-weight: $font-weight-m;
+}
+.valueDisplay {
+  padding: 4px 8px;
+  border-radius: 2px;
+  border: 1px solid rgba(199, 199, 199, 0.3);
+  background: #fff;
+  width: 80px;
+  height: 26px;
+
+  color: $gray3;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  font-weight: $font-weight-m;
+}

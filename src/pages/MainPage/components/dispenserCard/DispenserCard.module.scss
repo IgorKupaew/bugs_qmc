@@ -1,0 +1,142 @@
+@import "../../../../styles/variables/consts.scss";
+
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .maincard {
+    border-radius: 4px 4px 0 0;
+    width: 276px;
+    ul {
+      background-color: #fcfcfc;
+      border-top: 0.5px solid #f5f5f5;
+    }
+    .cardRow {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+      display: flex;
+      justify-content: space-between;
+      .cardRowTitle {
+        color: #424242;
+        min-width: 100px;
+        font: var(--font-p14);
+      }
+      .statusTitle {
+        color: var(--gray-3, #616161);
+      }
+      .cardRowInput {
+        width: 80px;
+        max-height: 26px;
+        text-align: right;
+        font: var(--font-p14med);
+
+        border-radius: 2px;
+        border: 1px solid rgba(199, 199, 199, 0.3);
+        background: #fff;
+        input {
+          font-weight: 500;
+        }
+        .inputSvg {
+          width: 16px;
+          height: 16px;
+          padding: 4px;
+          border-radius: 2px;
+          border: 1px solid var(--gray-1, #f5f5f5);
+          background: #fff;
+          box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.04);
+        }
+      }
+      .humidityInput {
+        width: 80px;
+        max-height: 26px;
+        text-align: right;
+        font: var(--font-p14med);
+
+        border-radius: 2px;
+        border: 1px solid rgba(199, 199, 199, 0.3);
+        background: rgba(245, 245, 245, 0.5);
+      }
+      .statusHumidity {
+        color: var(--gray-3, #616161);
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .statusHumidityZero {
+        color: $gray2;
+      }
+      .statusHumidityMoreThanZero {
+        color: $addons-green;
+      }
+      .statusHumidityLessThanZero {
+        color: $addons-red;
+      }
+    }
+    .footerWrapper {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.03));
+      .cardFooter {
+        width: 100%;
+        min-height: 45px;
+        clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        color: var(--gray-2, #c7c7c7);
+        svg {
+          min-width: 17px;
+        }
+        span {
+          font: var(--font-p16med);
+          color: var(--gray-4, #424242);
+        }
+        .noVolumeSpan {
+          color: var(--gray-3, #616161);
+        }
+      }
+    }
+  }
+
+  .footerWrapper:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: all 0.2s ease;
+  }
+
+  @media (max-width: 1258px) {
+    .maincard {
+      width: unset;
+    }
+  }
+}
+
+:global {
+  .ant-input-affix-wrapper {
+    padding: 4px 4px 4px 8px !important;
+  }
+  .ant-card-actions > li {
+    margin: 0 !important;
+  }
+  .ant-card {
+    &::before {
+      pointer-events: none;
+      box-shadow: -1px -1px 15px -15px rgb(0, 0, 0);
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 60px;
+      right: 0;
+      background-color: transparent;
+      z-index: 1;
+    }
+  }
+  .ant-card-body {
+    z-index: 5;
+    position: relative;
+    background-color: #fff;
+  }
+  .ant-card-actions {
+    z-index: 1;
+    position: relative;
+  }
+}

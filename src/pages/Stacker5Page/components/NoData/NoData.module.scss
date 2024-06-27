@@ -1,0 +1,10 @@
+@import "../../../../styles/variables/consts.scss";
+
+.noData {
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-xxl;
+  text-align: center;
+
+  padding: 15px;
+}

@@ -1,0 +1,1 @@
+export { TrendArea } from "./TrendArea";

@@ -1,0 +1,214 @@
+@import "../../../../styles/variables/consts.scss";
+
+.warehouseMenuWrapper {
+  display: flex;
+}
+.warehouseMenu {
+  flex: 0 1 622px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+
+  border-radius: 6px;
+  border: 1px solid $gray1;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
+  background-color: #fff;
+  padding: 16px;
+}
+.warehouseChemicalCompositionTable {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.warehouseChemicalCompositionTableTitle {
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-l;
+  font-weight: $font-weight-m;
+}
+.warehouseChemicalCompositionTableList {
+  display: flex;
+  gap: 12px;
+}
+.warehouseChemicalCompositionTableItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  flex: 0 0 48.2px;
+}
+.warehouseChemicalCompositionTableItemName {
+  color: $gray4;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+}
+.warehouseChemicalCompositionTableItemValue {
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  font-weight: $font-weight-m;
+}
+
+.warehouseCurrentValues {
+  display: flex;
+  gap: 8px;
+}
+.warehouseCurrentValuesLabel {
+  color: $gray3;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+}
+.warehouseCurrentValuesBlock {
+  display: flex;
+  gap: 24px;
+}
+.warehouseCurrentValuesBlockCommon {
+  display: flex;
+  gap: 12px;
+}
+.currentValue {
+  display: flex;
+  gap: 8px;
+}
+.currentValueName {
+  color: $gray4;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+}
+.currentValueValue {
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  font-weight: $font-weight-m;
+}
+.warehouseCurrentValuesBlockAdditional {
+  display: flex;
+  gap: 8px;
+}
+
+.splitLine {
+  height: 1px;
+  width: 100%;
+  background-color: $gray1;
+}
+
+.mineralTable {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.mineralTablePie {
+  width: 83px;
+  height: 83px;
+  background-color: rgb(30, 129, 0);
+  border-radius: 50%;
+  border: 1px solid rgb(229, 255, 0);
+}
+.mineralTableList {
+  display: flex;
+  gap: 12px;
+}
+.mineralItem {
+  flex: 0 0 48px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.mineralItemName {
+  color: $gray4;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+.mineralItemValue {
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  font-weight: $font-weight-m;
+  text-align: center;
+}
+.mineralTableContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.mineralTableTitle {
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-l;
+  font-weight: $font-weight-m;
+}
+
+.KhCorrection {
+  border-left: 1px solid rgba(91, 95, 199, 0.1);
+  background: linear-gradient(0deg, rgba(91, 95, 199, 0.05) 0%, rgba(91, 95, 199, 0.05) 100%), #fff;
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  gap: 16px;
+}
+.KhCorrectionTitle {
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-l;
+  font-weight: $font-weight-l;
+}
+.khCorrectionInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  flex: 1 1 auto;
+}
+.khCorrectionInput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 268px;
+}
+.khCorrectionInputLabel {
+  color: $gray3;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+}
+.khCorrectionInputValue {
+  border-radius: 2px;
+  border: 1px solid rgba(199, 199, 199, 0.3);
+  background: #fff;
+  width: 80px;
+  padding: 4px 6px 4px 8px;
+  text-align: end;
+  color: $gray3;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  font-weight: $font-weight-m;
+}
+.khCorrectionButton {
+  border-radius: 4px;
+  background: $primary-3;
+  padding: 8px 16px;
+
+  color: #fff;
+  text-align: center;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  font-weight: $font-weight-m;
+
+  border: none;
+  outline: none;
+
+  transition: all 0.2s ease;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.85;
+  }
+}

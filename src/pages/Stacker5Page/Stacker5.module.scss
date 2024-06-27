@@ -1,0 +1,32 @@
+@import "../../styles/consts.scss";
+
+.container {
+  @include container;
+}
+.loaderContainer {
+  padding-top: 200px;
+}
+.heatmapsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  & > * {
+    flex: 0 0 922px;
+  }
+
+  @media (max-width: 1892px) {
+    justify-content: center;
+  }
+}
+.heatmapWrapper {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heatmapFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

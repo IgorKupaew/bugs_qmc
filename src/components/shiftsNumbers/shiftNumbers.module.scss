@@ -1,0 +1,91 @@
+@import "../../styles/variables/consts.scss";
+
+.shiftToggle {
+  display: flex;
+  justify-content: center;
+}
+.shiftInp[type="radio"] {
+  display: none;
+}
+
+.shiftLabel {
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid $primary-3;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: $primary-3;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  font-weight: $font-weight-m;
+  margin-left: 10px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(91, 95, 199, 0.15);
+  }
+}
+
+.shiftInp[type="radio"]:checked + .shiftLabel {
+  background-color: $primary-3;
+  border: 1px solid $primary-3;
+  color: white;
+}
+.shiftSwitcherTitle {
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+}
+.shiftSwitcherList {
+  display: flex;
+  gap: 8px;
+  border-radius: 6px;
+  border: 1px solid $primary-5;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.shiftSwitcherItem {
+  padding: 4px 12px;
+  color: $gray3;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  border: none;
+
+  &.active {
+    border-radius: 4px;
+    outline: 1px solid rgba(199, 199, 199, 0.3);
+    background: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.04);
+    color: $primary-1;
+  }
+}
+
+.shiftSwitcherItemLoading {
+  padding: 4px 12px;
+  color: $gray3;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  transition: all 0.2s ease;
+  user-select: none;
+  cursor: not-allowed;
+  border: none;
+  &.active {
+    border-radius: 4px;
+    outline: 1px solid rgba(199, 199, 199, 0.3);
+    background: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.04);
+    color: $primary-1;
+  }
+}
+
+.shiftSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}

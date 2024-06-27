@@ -1,0 +1,142 @@
+@import "../../../../styles/variables/consts.scss";
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.headerTitleText {
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-xl;
+}
+.headerTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.headerMenu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.warehouseSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.warehouseSwitcherTitle {
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+}
+.warehouseSwitcherTitleData {
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+
+  margin-right: 10px;
+}
+.warehouseSwitcherList {
+  display: flex;
+  gap: 8px;
+  border-radius: 6px;
+  border: 1px solid $primary-5;
+  background: $gray1;
+}
+.warehouseSwitcherItem {
+  padding: 2px 12px;
+  color: $gray3;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+
+  &.active {
+    border-radius: 4px;
+    outline: 1px solid rgba(199, 199, 199, 0.3);
+    background: #fff;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.04);
+  }
+}
+.warehouseActionsContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+@mixin warehouseAction($gapValue) {
+  display: flex;
+  align-items: center;
+  gap: $gapValue;
+
+  transition: all 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.warehouseActionsAdd {
+  @include warehouseAction(10px);
+
+  border-radius: 4px;
+  border: 1px solid $primary-3;
+  padding: 8px 16px;
+
+  color: $primary-3;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  font-weight: $font-weight-m;
+}
+.warehouseActionsUpdate {
+  @include warehouseAction(12px);
+
+  border-radius: 4px;
+  background: $primary-3;
+  padding: 8px 16px;
+
+  color: #fff;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  font-weight: $font-weight-m;
+}
+.greenDot {
+  background-color: #13a10e;
+  stroke-width: 1px;
+  border: 1px solid rgba(19, 161, 14, 0.3);
+  width: 4px;
+  height: 4px;
+}
+.workTitleOff {
+  color: #ee5157;
+  background-color: rgb(238, 81, 87, 0.1);
+}
+.workTitleOn {
+  color: var(--addons-green, #13a10e);
+  background: rgba(19, 161, 14, 0.1);
+}
+.workTitle {
+  font-family: $font-family-main;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 4px 2px 3px;
+  max-width: 59px;
+  border-radius: 2px;
+}
+.opacity {
+  opacity: 0;
+}

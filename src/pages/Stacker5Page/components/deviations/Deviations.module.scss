@@ -1,0 +1,102 @@
+@import "../../../../styles/variables/consts.scss";
+
+.deviations {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+
+  border-radius: 6px;
+  border: 1px solid $gray1;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
+}
+.deviationsHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.deviationsHeaderTitle {
+  flex: 1 1 auto;
+
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-m;
+}
+.choosePeriod {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+.choosePeriodLabel {
+  color: $primary-3;
+  font-family: $font-family-main;
+  font-size: $font-size-mini-m;
+  font-weight: $font-weight-m;
+}
+.chooseTypeContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border-radius: 6px;
+  border: 1px solid $primary-5;
+  background: $gray1;
+  padding: 2px;
+}
+.chooseTypeButton {
+  padding: 4px 12px;
+  color: $gray3;
+  text-align: center;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+
+  &.current {
+    border-radius: 4px;
+    outline: 1px solid rgba(199, 199, 199, 0.3);
+    background: #fff;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.04);
+
+    color: $primary-1;
+    font-weight: $font-weight-m;
+
+    &:hover {
+      color: $primary-1;
+      background-color: #fff;
+    }
+  }
+
+  &:hover {
+    color: #000;
+    background-color: #e2e2e2;
+  }
+}
+.rangePicker {
+  width: 0px;
+  transition: all 0.2s ease;
+  &.isOpen {
+    width: auto;
+  }
+}
+.empty {
+  position: absolute;
+  top: 9%;
+  left: 40%;
+}
+.emptyContainer {
+  position: relative;
+}

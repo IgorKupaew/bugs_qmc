@@ -1,0 +1,8 @@
+@import "../../styles/consts.scss";
+
+.container {
+  @include container;
+}
+.loaderContainer {
+  padding-top: 200px;
+}

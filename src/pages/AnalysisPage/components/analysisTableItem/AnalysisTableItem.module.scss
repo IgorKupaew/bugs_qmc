@@ -1,0 +1,80 @@
+@import "../../../../styles/variables/consts.scss";
+
+.table {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 15px;
+  color: $gray5;
+  font-size: $font-size-m;
+  font-weight: $font-weight-m;
+  font-family: $font-family-main;
+}
+
+.dutyName {
+  width: 505px;
+}
+
+.dutyNameItem {
+  min-height: 100%;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.date {
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  width: 140px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stuff {
+  max-width: 181px;
+}
+
+.stuffItem {
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.inputs {
+  display: flex;
+  gap: 8px;
+}
+
+.elementItem {
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  height: 50px;
+  width: 9%;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.elementItem::-webkit-outer-spin-button,
+.elementItem::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.elementItem,
+.elementItem:hover,
+.elementItem:focus {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+.element {
+  display: flex;
+  gap: 8px;
+}

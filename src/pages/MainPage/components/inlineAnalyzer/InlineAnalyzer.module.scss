@@ -1,0 +1,180 @@
+@import "../../../../styles/variables/consts.scss";
+
+@mixin spaceBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.table {
+  padding: 16px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  z-index: 2;
+  flex: 0 0 620px;
+  padding: 0 16px 16px 16px;
+  background-color: #fff;
+  border-radius: 6px 6px 6px 0px;
+  max-height: 220px;
+  position: relative;
+  box-shadow: 0px -1px 15px -15px rgb(0, 0, 0);
+  margin-bottom: 70px;
+}
+
+.title {
+  @include spaceBetween;
+  gap: 12px;
+  padding: 12px 0 12px 0;
+  border-radius: 6px 6px 0px 0px;
+  max-height: 47px;
+}
+.tableTitle {
+  max-height: 17px;
+}
+.tableTitleContainer {
+  max-height: 17px;
+}
+.titleText {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-m;
+}
+.titleRightSide {
+  @include centerContainer;
+  gap: 12px;
+}
+.titleTime {
+  @include spaceBetween;
+  gap: 6px;
+
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  font-weight: $font-weight-r;
+}
+.titleMoisture {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  flex: 0 0 102px;
+
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  font-weight: $font-weight-r;
+}
+
+.moistureLabel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.titleStatus {
+  gap: 6px;
+
+  display: flex;
+  align-items: center;
+
+  color: $addons-green;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  font-weight: $font-weight-r;
+
+  &.error {
+    color: $addons-red;
+  }
+}
+
+.statusTitleText {
+  cursor: pointer;
+}
+
+.tableTitle {
+  color: $gray3;
+  font-family: $font-family-main;
+  font-size: $font-size-mini-m;
+  font-weight: $font-weight-r;
+}
+.tableTitleContainer {
+}
+.tableList {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.tableItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 0 0 88px;
+}
+.tableItemName {
+  color: $gray4;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  font-weight: $font-weight-r;
+  @include centerContainer;
+}
+.tableItemValue {
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  font-weight: $font-weight-m;
+  @include centerContainer;
+}
+
+.footerWrapper {
+  z-index: 0;
+  position: absolute;
+  bottom: -56px;
+  left: 0;
+  width: 160px;
+  height: 56px;
+  filter: drop-shadow(0px 4px 4px rgb(0, 0, 0, 0.03));
+  .cardFooter {
+    width: 100%;
+    height: 56px;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: var(--gray-2, #c7c7c7);
+    svg {
+      min-width: 17px;
+    }
+    span {
+      font: var(--font-p16med);
+      color: var(--gray-4, #424242);
+    }
+    .noVolumeSpan {
+      color: var(--gray-3, #616161);
+    }
+  }
+}
+.performanceItem {
+  color: $gray4;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  font-weight: $font-weight-r;
+  margin-left: 10px;
+}
+.performanceValue {
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  font-weight: $font-weight-m;
+  margin-left: 8px;
+}

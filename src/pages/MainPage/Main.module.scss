@@ -1,0 +1,57 @@
+@import "../../styles/consts.scss";
+
+.container {
+  @include container;
+}
+.firstBlock {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap-reverse;
+  padding: 0 10px 0 10px;
+}
+.secondBlock {
+  display: flex;
+  gap: 12.5px;
+  max-height: 93px;
+  padding: 0 10px;
+}
+.pillarBlock {
+  & > *:first-child {
+    padding-left: 146.5px;
+  }
+
+  @media (max-width: 1258px) {
+    & > *:first-child {
+      padding-left: 115px;
+    }
+  }
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+.placeSwitcherBlock {
+  position: relative;
+  top: -70px;
+  max-height: 154px;
+  @media (max-width: 1640px) {
+    & {
+      display: none;
+    }
+  }
+}
+.placeSwitcherBlockMinWidth {
+  display: none;
+  max-height: 154px;
+  @media (max-width: 1640px) {
+    & {
+      display: flex;
+      align-self: flex-end;
+    }
+  }
+}
+.pillarBlockLine {
+  display: flex;
+  svg {
+    max-width: 100%;
+  }
+}

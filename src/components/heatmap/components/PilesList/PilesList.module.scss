@@ -1,0 +1,38 @@
+@import "../../../../styles/variables/consts.scss";
+
+.columnTitle {
+  font-family: $font-family-main;
+  // font-size: $font-size-m;
+  font-weight: $font-weight-m;
+  font-size: $font-size-xl;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: 100%;
+}
+.columnItem {
+  font-family: $font-family-main;
+  font-size: $font-size-l;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: 100%;
+
+  min-width: 126px;
+}
+
+::global {
+  .ant-table-tbody > tr.ant-table-row:hover > td,
+  .ant-table-tbody > tr > td.ant-table-cell-row-hover {
+    background: red;
+    cursor: pointer !important;
+  }
+
+  .ant-table-row {
+    cursor: pointer !important;
+  }
+}

@@ -1,0 +1,143 @@
+@import "../../../../styles/variables/consts.scss";
+.charts {
+  display: flex;
+  justify-content: space-between;
+  gap: 26px;
+  padding: 0 10px;
+  @media (max-width: 1873px) {
+    .chartsItemContainer {
+      max-width: none;
+      flex: 1 1 25%;
+    }
+    .chartsItem {
+      max-width: none;
+    }
+  }
+  @media (max-width: 1280px) {
+    & {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    .chartsItemContainer {
+      max-width: none;
+      flex: 1 1 100%;
+    }
+    .chartsItem {
+      max-width: none;
+    }
+  }
+}
+.chartsItemContainer {
+  max-width: 597px;
+  flex: 1 1 auto;
+  border-radius: 6px;
+  border: 1px solid $gray1;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
+  padding: 16px;
+}
+.chartsItem {
+  max-width: 597px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px;
+  position: relative;
+
+  border-radius: 4px;
+  border: 1px solid $gray1;
+  background: rgba(245, 245, 245, 0.2);
+}
+.chartsTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+  margin-bottom: 16px;
+}
+.titleType {
+  color: $gray5;
+  font-family: $font-family-main;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-m;
+}
+.titleValues {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.titleInput {
+  input {
+    color: $gray5;
+    font-family: $font-family-main;
+    font-size: $font-size-m;
+
+    text-align: end;
+    border-radius: 2px;
+    border: 1px solid rgba(199, 199, 199, 0.3);
+    background: #fff;
+    width: 80px;
+    padding: 4px 6px 4px 8px;
+  }
+}
+.maxMinValue {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.titleDivider {
+  color: $gray2;
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+}
+.value {
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+  font-weight: $font-weight-m;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.valueWarning {
+  color: $addons-yellow;
+}
+.valueError {
+  color: $addons-red;
+}
+
+.buttonsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  width: 112px;
+  height: 64px;
+
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  z-index: 2;
+}
+.buttonItem {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+
+  border-radius: 6px;
+  border: 1px solid $gray1;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
+
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(91, 95, 199, 0.13);
+  }
+}

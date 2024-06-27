@@ -1,0 +1,82 @@
+@import "../../../../styles/variables/consts.scss";
+
+.placeSwitcherContainer {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  gap: 16px;
+  max-width: 398px;
+
+  border-radius: 6px;
+  border: 1px solid $gray2;
+  background: $gray1;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 6px;
+  background: #fff;
+  width: 175px;
+  height: 122px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+
+  border: 1px solid $gray1;
+  .cardTitle {
+    color: $gray3;
+  }
+  &.active {
+    border: 1px solid $primary-3;
+    .cardTitle {
+      color: $gray5;
+    }
+  }
+}
+.cardIcon {
+  height: 54px;
+}
+.cardTitle {
+  font-family: $font-family-main;
+  font-size: $font-size-m;
+}
+
+.inWorkIcon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  transition: all 0.2s ease;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 4px 2px 3px;
+  background: rgba(19, 161, 14, 0.1);
+  max-width: 59px;
+  border-radius: 2px;
+}
+.greenDot {
+  background-color: #13a10e;
+  stroke-width: 1px;
+  border: 1px solid rgba(19, 161, 14, 0.3);
+  width: 4px;
+  height: 4px;
+}
+.inWorkTitle {
+  color: var(--addons-green, #13a10e);
+  font-family: $font-family-main;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.opacity {
+  opacity: 0;
+}
